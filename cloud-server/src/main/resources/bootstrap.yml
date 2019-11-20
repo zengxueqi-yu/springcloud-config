@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: cloud-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zengxueqi-yu/SpringCloudConfig/  #从github上面获取配置文件地址
+          username: zengxueqi-yu@outlook.com  #github账户名
+          password: vayne1314  #github密码
+          search-paths: /** #配置文件所在目录
+      label: master  #配置文件所在的分支
+
+server:
+  port: 8908
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8910/eureka/
